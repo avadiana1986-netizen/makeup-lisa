@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philosophy | MAKEUP LISA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #ffffff; --text: #1a1a1a; --accent: #777; --light-gray: #f9f9f9; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+        
+        /* 导航栏 */
+        nav { position: fixed; top: 0; width: 100%; padding: 30px 5%; display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.98); z-index: 1000; border-bottom: 1px solid #eee; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 400; letter-spacing: 3px; text-decoration: none; color: var(--text); }
+        .nav-links { display: flex; list-style: none; }
+        .nav-links li { margin-left: 40px; }
+        .nav-links a { text-decoration: none; color: var(--text); font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* 顶部 Hero - 使用 Image 2 (科学感) */
+        .philosophy-hero { 
+            height: 60vh; 
+            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
+                        url('https://i.postimg.cc/Hk6TSQLp/photo-2-2026-04-19-04-28-09.jpg') center/cover no-repeat;
+            display: flex; align-items: center; justify-content: center; margin-top: 80px;
+        }
+        .philosophy-hero h1 { color: white; font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 400; text-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+
+        /* 内容区域 */
+        .content-section { max-width: 1100px; margin: 100px auto; padding: 0 5%; }
+        .intro-text { max-width: 800px; margin: 0 auto 100px; text-align: center; }
+        .intro-text h2 { font-family: 'Playfair Display', serif; font-size: 36px; margin-bottom: 30px; font-weight: 400; }
+        .intro-text p { font-size: 18px; font-weight: 300; color: #444; }
+
+        /* 图文混合排版 - 使用新图 Image 3 (产品感) */
+        .split-section { display: flex; align-items: center; gap: 80px; margin-bottom: 120px; background: var(--light-gray); padding: 80px 5%; }
+        .split-image { flex: 1; height: 500px; background: url('https://i.postimg.cc/xTNBBhPc/photo-2026-04-19-07-00-48.jpg') center/cover no-repeat; box-shadow: 20px 20px 0px #fff; }
+        .split-text { flex: 1; }
+        .split-text h3 { font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 25px; font-weight: 400; }
+        .split-text p { font-size: 16px; color: #555; margin-bottom: 20px; }
+
+        /* 核心价值观网格 */
+        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 100px; text-align: center; }
+        .value-item h4 { font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 15px; font-style: italic; }
+        .value-item p { font-size: 14px; color: #777; line-height: 1.6; }
+
+        /* 页脚 */
+        footer { padding: 100px 10% 40px; background: #000; color: white; text-align: center; }
+        .footer-email { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2.5rem); color: white; text-decoration: none; display: block; margin: 40px 0; border-bottom: 1px solid #333; padding-bottom: 20px; transition: 0.3s; }
+        .footer-email:hover { color: #aaa; }
+        .copyright { font-size: 10px; letter-spacing: 2px; color: #666; text-transform: uppercase; margin-top: 60px; }
+
+        /* 移动端适配 */
+        @media (max-width: 900px) {
+            .split-section { flex-direction: column; gap: 40px; padding: 40px 5%; }
+            .split-image { width: 100%; height: 350px; flex: none; }
+            .values-grid { grid-template-columns: 1fr; gap: 60px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">MAKEUP LISA</a>
+        <ul class="nav-links">
+            <li><a href="collection.html">Collection</a></li>
+            <li><a href="philosophy.html" style="font-weight: 600; border-bottom: 1px solid #000;">Philosophy</a></li>
+            <li><a href="founder.html">Founder</a></li>
+        </ul>
+    </nav>
+
+    <div class="philosophy-hero">
+        <h1>The Science of Less</h1>
+    </div>
+
+    <main class="content-section">
+        <div class="intro-text">
+            <h2>Our Core Belief</h2>
+            <p>At MAKEUP LISA, our partnership with VENN Skincare is built on a shared commitment to radical transparency and scientific excellence. We believe that modern skincare has become unnecessarily complex. Our mission is to strip away the noise and focus on what truly matters.</p>
+        </div>
+
+        <!-- 这里的组合非常高级：左侧是你的新图，右侧是文字 -->
+        <div class="split-section">
+            <div class="split-image"></div>
+            <div class="split-text">
+                <h3>Streamlined Excellence</h3>
+                <p>One step, multiple benefits. Our products are designed to replace complex routines without compromising on efficacy, perfect for the modern professional.</p>
+                <p>By leveraging advanced bio-technology from South Korea, we deliver high concentrations of active ingredients directly where the skin needs them most.</p>
+                <a href="collection.html" style="color: black; font-size: 12px; letter-spacing: 2px; text-decoration: none; border-bottom: 1px solid #000; padding-bottom: 3px; text-transform: uppercase;">View the Collection</a>
+            </div>
+        </div>
+
+        <div class="values-grid">
+            <div class="value-item">
+                <h4>Bio-Adaptive</h4>
+                <p>Technology that ensures active ingredients penetrate deeper and stay active longer.</p>
+            </div>
+            <div class="value-item">
+                <h4>Clean Integrity</h4>
+                <p>Science-led doesn't mean synthetic-heavy. Every formula is non-toxic and clean.</p>
+            </div>
+            <div class="value-item">
+                <h4>Global Innovation</h4>
+                <p>Bridging the best of South Korean R&D with New York's fast-paced lifestyle.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <span style="font-size: 11px; letter-spacing: 3px; color: #888; text-transform: uppercase;">Partnership Inquiries</span>
+        <a href="mailto:lisa1987@makeuplisa.com" class="footer-email">lisa1987@makeuplisa.com</a>
+        <p style="font-size: 13px; color: #666;">Elevating Skincare Through Science.</p>
+        <div class="copyright">© 2026 MAKEUP LISA. ALL RIGHTS RESERVED.</div>
+    </footer>
+
+</body>
+</html>

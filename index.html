@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAKEUP LISA | Official VENN Partner</title>
+    <!-- 引入高端字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #ffffff; --text: #1a1a1a; --accent: #777; --light-gray: #f9f9f9; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+        
+        /* 导航栏 */
+        nav { position: fixed; top: 0; width: 100%; padding: 30px 5%; display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.98); z-index: 1000; border-bottom: 1px solid #eee; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 400; letter-spacing: 3px; text-decoration: none; color: var(--text); }
+        .nav-links { display: flex; list-style: none; }
+        .nav-links li { margin-left: 40px; }
+        .nav-links a { text-decoration: none; color: var(--text); font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; transition: 0.3s; font-weight: 400; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Hero 主视觉区域 - 使用了你提供的高级图 */
+        .hero { 
+            height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            padding: 0 10%; 
+            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
+                        url('https://i.postimg.cc/TY81mqKF/photo-1-2026-04-19-04-28-09.jpg') center/cover no-repeat;
+            background-attachment: fixed; /* 视差滚动效果，增加高级感 */
+        }
+        .hero-text { max-width: 650px; color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        .hero-text span { font-size: 11px; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 25px; display: block; font-weight: 600; color: rgba(255,255,255,0.9); }
+        .hero-text h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 400; line-height: 1.05; margin-bottom: 35px; font-style: italic; }
+        .hero-text p { font-size: 19px; font-weight: 300; margin-bottom: 45px; line-height: 1.8; color: rgba(255,255,255,0.85); }
+        
+        /* 按钮设计 */
+        .btn { 
+            display: inline-block; 
+            padding: 20px 45px; 
+            background: #fff; 
+            color: #000; 
+            text-decoration: none; 
+            font-size: 11px; 
+            letter-spacing: 3px; 
+            text-transform: uppercase; 
+            transition: 0.4s;
+            border: 1px solid #fff;
+        }
+        .btn:hover { background: transparent; color: #fff; }
+
+        /* 产品预告区域 */
+        .featured-intro { padding: 140px 10%; text-align: center; background: #fff; }
+        .featured-intro h2 { font-family: 'Playfair Display', serif; font-size: 38px; margin-bottom: 30px; font-weight: 400; }
+        .featured-intro p { max-width: 700px; margin: 0 auto; color: #666; font-size: 16px; font-weight: 300; }
+
+        /* 页脚 - 你的核心信息 */
+        footer { padding: 120px 10% 60px; background: #000; color: white; text-align: center; }
+        .footer-tagline { font-size: 11px; letter-spacing: 4px; color: #888; text-transform: uppercase; margin-bottom: 30px; display: block; }
+        .footer-email { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 4vw, 3rem); color: white; text-decoration: none; display: block; border-bottom: 1px solid #333; padding-bottom: 30px; margin-bottom: 50px; transition: 0.4s; font-style: italic; }
+        .footer-email:hover { color: #ccc; border-bottom: 1px solid #fff; }
+        .copyright { font-size: 9px; letter-spacing: 2px; color: #555; text-transform: uppercase; margin-top: 80px; }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            nav { padding: 20px 5%; }
+            .nav-links { display: none; } /* 移动端隐藏菜单，保持极简 */
+            .hero { padding: 0 5%; text-align: center; justify-content: center; background-attachment: scroll; }
+            .hero-text h1 { font-size: 3rem; }
+            .featured-intro { padding: 80px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">MAKEUP LISA</a>
+        <ul class="nav-links">
+            <li><a href="collection.html">Collection</a></li>
+            <li><a href="philosophy.html">Philosophy</a></li>
+            <li><a href="founder.html">Founder</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <span>Official Distribution Partner</span>
+            <h1>Science-Led Beauty <br>for the Modern Era.</h1>
+            <p>Representing VENN Skincare. We bridge the gap between advanced South Korean bio-technology and premium US skincare rituals.</p>
+            <a href="collection.html" class="btn">Explore Collection</a>
+        </div>
+    </section>
+
+    <section class="featured-intro">
+        <h2>The Art of Efficiency</h2>
+        <p>Our partnership with VENN brings you the most efficient, multi-correctional skincare solutions. Driven by results, backed by science, and designed for those who demand excellence without complexity.</p>
+        <br><br>
+        <a href="philosophy.html" style="color
