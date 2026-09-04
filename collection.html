@@ -4,154 +4,210 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Collection | MAKEUP LISA</title>
+    <meta name="description" content="Curated VENN Skincare essentials from MAKEUP LISA—Retinal Infusion MLV10 Serum, Rejuvenative PDRN-NE Ampoule, Probiotic-Tensive Hydro Firming Body Cream, and Age-Recharge Compound K Eye Concentrate.">
+    <link rel="canonical" href="https://makeuplisa.com/collection.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="MAKEUP LISA">
+    <meta property="og:title" content="The Collection | MAKEUP LISA">
+    <meta property="og:description" content="Curated VENN Skincare essentials from MAKEUP LISA—Retinal Infusion MLV10 Serum, Rejuvenative PDRN-NE Ampoule, Probiotic-Tensive Hydro Firming Body Cream, and Age-Recharge Compound K Eye Concentrate.">
+    <meta property="og:url" content="https://makeuplisa.com/collection.html">
+    <meta property="og:image" content="https://makeuplisa.com/images/products/retinal-infusion-mlv10-serum-1.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Collection | MAKEUP LISA">
+    <meta name="twitter:description" content="Curated VENN Skincare essentials from MAKEUP LISA—Retinal Infusion MLV10 Serum, Rejuvenative PDRN-NE Ampoule, Probiotic-Tensive Hydro Firming Body Cream, and Age-Recharge Compound K Eye Concentrate.">
+    <meta name="twitter:image" content="https://makeuplisa.com/images/products/retinal-infusion-mlv10-serum-1.jpg">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/shared.css">
     <style>
-        :root { --bg: #ffffff; --text: #1a1a1a; --accent: #777; --light-gray: #f9f9f9; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-        
-        /* 导航栏 */
-        nav { position: fixed; top: 0; width: 100%; padding: 30px 5%; display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.98); z-index: 1000; border-bottom: 1px solid #eee; }
-        .logo { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 400; letter-spacing: 3px; text-decoration: none; color: var(--text); }
-        .nav-links { display: flex; list-style: none; }
-        .nav-links li { margin-left: 40px; }
-        .nav-links a { text-decoration: none; color: var(--text); font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; }
-
-        /* 页面标题 */
-        header.collection-header { margin-top: 150px; text-align: center; padding: 60px 5% 40px; }
-        header.collection-header h1 { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 400; letter-spacing: 1px; }
-
-        /* 核心产品展示区 */
-        .products-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; padding: 0 10% 80px; }
-        .product-item { text-align: center; }
-        a.product-item { display: block; text-decoration: none; color: inherit; cursor: pointer; }
-        .img-container { position: relative; width: 100%; height: 550px; overflow: hidden; background: #f4f4f4; margin-bottom: 20px; }
-        .img-container img { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.5s ease; }
-        
-        
-        
-        .product-info h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; margin-bottom: 5px; }
-        .product-info p { font-size: 11px; color: #999; letter-spacing: 2px; text-transform: uppercase; }
-
-        /* 精简版 24 图视觉墙 */
-        .visual-wall { 
-            display: grid; 
-            grid-template-columns: repeat(6, 1fr); /* 增加列数使单图变小 */
-            gap: 10px; /* 缩小间隙 */
-            padding: 80px 5% 100px;
-            border-top: 1px solid #eee;
+        .collection-header { margin-top: 120px; text-align: center; padding: 48px 5% 36px; }
+        .collection-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 2.6rem);
+            font-weight: 400;
+            margin-bottom: 12px;
         }
-        .wall-item { aspect-ratio: 1 / 1; overflow: hidden; } /* 强制正方形 */
-        .wall-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-        .wall-item img:hover { transform: scale(1.08); }
-
-        /* 页脚 */
-        footer { padding: 80px 10% 40px; background: #000; color: white; text-align: center; }
-        .footer-email { font-family: 'Playfair Display', serif; font-size: 24px; color: white; text-decoration: none; display: block; margin: 30px 0; font-style: italic; }
-        .copyright { font-size: 9px; letter-spacing: 2px; color: #555; text-transform: uppercase; }
-
-        /* 响应式适配 */
+        .collection-header p {
+            font-size: 14px;
+            font-weight: 300;
+            color: var(--muted);
+            max-width: 480px;
+            margin: 0 auto;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            padding: 20px 10% 80px;
+        }
+        a.product-item {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            text-align: center;
+        }
+        .img-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            overflow: hidden;
+            background: #f4f4f4;
+            margin-bottom: 20px;
+        }
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.45s ease;
+        }
+        a.product-item:hover img { transform: scale(1.03); }
+        .product-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+        .product-info p {
+            font-size: 11px;
+            color: var(--muted);
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+        .shop-link {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text);
+            border-bottom: 1px solid #000;
+            padding-bottom: 2px;
+        }
+        .visual-wall {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 8px;
+            padding: 60px 5% 90px;
+            border-top: 1px solid var(--border);
+        }
+        .wall-item { aspect-ratio: 1 / 1; overflow: hidden; }
+        .wall-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.45s ease;
+        }
+        .wall-item:hover img { transform: scale(1.06); }
         @media (max-width: 1200px) { .visual-wall { grid-template-columns: repeat(4, 1fr); } }
         @media (max-width: 768px) {
-            .products-grid { grid-template-columns: 1fr; }
+            .products-grid { grid-template-columns: 1fr; padding: 10px 5% 60px; gap: 36px; }
             .visual-wall { grid-template-columns: repeat(2, 1fr); }
-            .img-container { height: 400px; }
-            .nav-links { display: none; }
         }
     </style>
+
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
     <nav>
-        <a href="index.html" class="logo">MAKEUP LISA</a>
-        <ul class="nav-links">
-            <li><a href="collection.html" style="font-weight: 600; border-bottom: 1px solid #000;">Collection</a></li>
+        <a href="index.html" class="logo-block">
+            <span class="logo">MAKEUP LISA</span>
+            <span class="logo-tagline">Skincare Curation · VENN Partner</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="primary-nav">
+            <li><a href="collection.html" aria-current="page">Collection</a></li>
             <li><a href="philosophy.html">Philosophy</a></li>
             <li><a href="founder.html">Founder</a></li>
         </ul>
     </nav>
 
-    <header class="collection-header">
-        <h1>The Collection</h1>
-    </header>
+    <main id="main">
+        <header class="collection-header">
+            <h1>The Collection</h1>
+            <p>Curated VENN essentials — official partner selection. Shop each formula on VENN.</p>
+        </header>
 
-    <!-- 核心产品展示区 -->
-            <section class="products-grid">
-        <a class="product-item" href="https://vennskincare.com/collections/venn/products/retinal-infusion-mlv10-serum" target="_blank" rel="noopener noreferrer">
-            <div class="img-container">
-                <img src="images/products/retinal-infusion-mlv10-serum-1.jpg" class="img-main" alt="Retinal Infusion MLV10 Serum">
-            </div>
-            <div class="product-info">
-                <h3>Age-Reversing All-In-One</h3>
-                <p>Advanced Concentration</p>
-            </div>
-        </a>
+        <section class="products-grid">
+            <a class="product-item" href="https://vennskincare.com/collections/venn/products/retinal-infusion-mlv10-serum" target="_blank" rel="noopener noreferrer">
+                <div class="img-container">
+                    <img src="images/products/retinal-infusion-mlv10-serum-1.jpg" alt="Retinal Infusion MLV10 Serum" width="800" height="1000">
+                </div>
+                <div class="product-info">
+                    <h3>Retinal Infusion MLV10 Serum</h3>
+                    <p>Night renewal</p>
+                    <span class="shop-link">Shop on VENN</span>
+                </div>
+            </a>
+            <a class="product-item" href="https://vennskincare.com/collections/venn/products/rejuvenative-pdrn-ne-ampoule-face-serum" target="_blank" rel="noopener noreferrer">
+                <div class="img-container">
+                    <img src="images/products/rejuvenative-pdrn-ne-ampoule-1.jpg" alt="Rejuvenative PDRN-NE Ampoule" width="800" height="1000">
+                </div>
+                <div class="product-info">
+                    <h3>Rejuvenative PDRN-NE Ampoule</h3>
+                    <p>Cellular repair</p>
+                    <span class="shop-link">Shop on VENN</span>
+                </div>
+            </a>
+            <a class="product-item" href="https://vennskincare.com/collections/venn/products/probiotic-tensive-hydro-firming-body-cream" target="_blank" rel="noopener noreferrer">
+                <div class="img-container">
+                    <img src="images/products/probiotic-tensive-body-cream-1.jpg" alt="Probiotic-Tensive Hydro Firming Body Cream" width="800" height="1000">
+                </div>
+                <div class="product-info">
+                    <h3>Probiotic-Tensive Hydro Firming Body Cream</h3>
+                    <p>Firming body care</p>
+                    <span class="shop-link">Shop on VENN</span>
+                </div>
+            </a>
+            <a class="product-item" href="https://vennskincare.com/collections/venn/products/age-recharge-compound-k-eye-concentrate" target="_blank" rel="noopener noreferrer">
+                <div class="img-container">
+                    <img src="images/products/age-recharge-eye-concentrate-1.jpg" alt="Age-Recharge Compound K Eye Concentrate" width="800" height="1000">
+                </div>
+                <div class="product-info">
+                    <h3>Age-Recharge Compound K Eye Concentrate</h3>
+                    <p>Eye renewal</p>
+                    <span class="shop-link">Shop on VENN</span>
+                </div>
+            </a>
+        </section>
 
-        <a class="product-item" href="https://vennskincare.com/collections/venn/products/rejuvenative-pdrn-ne-ampoule-face-serum" target="_blank" rel="noopener noreferrer">
-            <div class="img-container">
-                <img src="images/products/rejuvenative-pdrn-ne-ampoule-1.jpg" class="img-main" alt="Rejuvenative PDRN-NE Ampoule">
-            </div>
-            <div class="product-info">
-                <h3>Vitamin B Activated</h3>
-                <p>Energetic Recovery</p>
-            </div>
-        </a>
-
-        <a class="product-item" href="https://vennskincare.com/collections/venn/products/probiotic-tensive-hydro-firming-body-cream" target="_blank" rel="noopener noreferrer">
-            <div class="img-container">
-                <img src="images/products/probiotic-tensive-body-cream-1.jpg" class="img-main" alt="Probiotic-Tensive Body Cream">
-            </div>
-            <div class="product-info">
-                <h3>Multi-Perfecting Red Oil</h3>
-                <p>Nourishing Radiance</p>
-            </div>
-        </a>
-
-        <a class="product-item" href="https://vennskincare.com/collections/venn/products/age-recharge-compound-k-eye-concentrate" target="_blank" rel="noopener noreferrer">
-            <div class="img-container">
-                <img src="images/products/age-recharge-eye-concentrate-1.jpg" class="img-main" alt="Age-Recharge Eye Concentrate">
-            </div>
-            <div class="product-info">
-                <h3>Moisture-Balance Serum</h3>
-                <p>Hydration Complex</p>
-            </div>
-        </a>
-    </section>
-
-    <!-- 视觉墙 (纯图片展示) -->
-    <section class="visual-wall">
-        
-        <div class="wall-item"><img src="images/wall/photo_33.jpg"></div>
-        <div class="wall-item"><img src="images/wall/photo_32.jpg"></div>
-        <div class="wall-item"><img src="images/wall/photo_31.jpg"></div>
-        <div class="wall-item"><img src="images/wall/photo_30.jpg"></div>
-        <div class="wall-item"><img src="images/wall/photo_29.jpg"></div>
-        <div class="wall-item"><img src="images/wall/photo_28.jpg"></div>
-        <div class="wall-item"><img src="images/wall/photo_27.jpg"></div>
-        <div class="wall-item"><img src="images/wall/photo_26.jpg"></div>
-        <div class="wall-item"><img src="images/wall/photo_25.jpg"></div>
-        <div class="wall-item"><img src="images/wall/photo_24.jpg"></div>
-        <div class="wall-item"><img src="images/wall/photo_23.jpg"></div>
-        <div class="wall-item"><img src="images/wall/photo_22.jpg"></div>
-        <div class="wall-item"><img src="images/wall/photo_21.jpg"></div>
-        <div class="wall-item"><img src="images/wall/photo_20.jpg"></div>
-        <div class="wall-item"><img src="images/wall/photo_19.jpg"></div>
-        <div class="wall-item"><img src="images/wall/photo_18.jpg"></div>
-        <div class="wall-item"><img src="images/wall/photo_17.jpg"></div>
-        <div class="wall-item"><img src="images/wall/photo_16.jpg"></div>
-        <div class="wall-item"><img src="images/wall/photo_15.jpg"></div>
-        <div class="wall-item"><img src="images/wall/photo_14.jpg"></div>
-        <div class="wall-item"><img src="images/wall/photo_13.jpg"></div>
-        <div class="wall-item"><img src="images/wall/photo_12.jpg"></div>
-        <div class="wall-item"><img src="images/wall/photo_11.jpg"></div>
-        <div class="wall-item"><img src="images/wall/photo_10.jpg"></div>
-    
-    </section>
+        <section class="visual-wall" aria-label="Editorial campaign imagery">
+            <div class="wall-item"><img src="images/wall/photo_33.jpg" alt="Editorial skincare imagery 33" loading="lazy" width="400" height="400"></div>
+            <div class="wall-item"><img src="images/wall/photo_32.jpg" alt="Editorial skincare imagery 32" loading="lazy" width="400" height="400"></div>
+            <div class="wall-item"><img src="images/wall/photo_31.jpg" alt="Editorial skincare imagery 31" loading="lazy" width="400" height="400"></div>
+            <div class="wall-item"><img src="images/wall/photo_30.jpg" alt="Editorial skincare imagery 30" loading="lazy" width="400" height="400"></div>
+            <div class="wall-item"><img src="images/wall/photo_29.jpg" alt="Editorial skincare imagery 29" loading="lazy" width="400" height="400"></div>
+            <div class="wall-item"><img src="images/wall/photo_28.jpg" alt="Editorial skincare imagery 28" loading="lazy" width="400" height="400"></div>
+            <div class="wall-item"><img src="images/wall/photo_27.jpg" alt="Editorial skincare imagery 27" loading="lazy" width="400" height="400"></div>
+            <div class="wall-item"><img src="images/wall/photo_26.jpg" alt="Editorial skincare imagery 26" loading="lazy" width="400" height="400"></div>
+            <div class="wall-item"><img src="images/wall/photo_25.jpg" alt="Editorial skincare imagery 25" loading="lazy" width="400" height="400"></div>
+            <div class="wall-item"><img src="images/wall/photo_24.jpg" alt="Editorial skincare imagery 24" loading="lazy" width="400" height="400"></div>
+            <div class="wall-item"><img src="images/wall/photo_23.jpg" alt="Editorial skincare imagery 23" loading="lazy" width="400" height="400"></div>
+            <div class="wall-item"><img src="images/wall/photo_22.jpg" alt="Editorial skincare imagery 22" loading="lazy" width="400" height="400"></div>
+            <div class="wall-item"><img src="images/wall/photo_21.jpg" alt="Editorial skincare imagery 21" loading="lazy" width="400" height="400"></div>
+            <div class="wall-item"><img src="images/wall/photo_20.jpg" alt="Editorial skincare imagery 20" loading="lazy" width="400" height="400"></div>
+            <div class="wall-item"><img src="images/wall/photo_19.jpg" alt="Editorial skincare imagery 19" loading="lazy" width="400" height="400"></div>
+            <div class="wall-item"><img src="images/wall/photo_18.jpg" alt="Editorial skincare imagery 18" loading="lazy" width="400" height="400"></div>
+            <div class="wall-item"><img src="images/wall/photo_17.jpg" alt="Editorial skincare imagery 17" loading="lazy" width="400" height="400"></div>
+            <div class="wall-item"><img src="images/wall/photo_16.jpg" alt="Editorial skincare imagery 16" loading="lazy" width="400" height="400"></div>
+            <div class="wall-item"><img src="images/wall/photo_15.jpg" alt="Editorial skincare imagery 15" loading="lazy" width="400" height="400"></div>
+            <div class="wall-item"><img src="images/wall/photo_14.jpg" alt="Editorial skincare imagery 14" loading="lazy" width="400" height="400"></div>
+            <div class="wall-item"><img src="images/wall/photo_13.jpg" alt="Editorial skincare imagery 13" loading="lazy" width="400" height="400"></div>
+            <div class="wall-item"><img src="images/wall/photo_12.jpg" alt="Editorial skincare imagery 12" loading="lazy" width="400" height="400"></div>
+            <div class="wall-item"><img src="images/wall/photo_11.jpg" alt="Editorial skincare imagery 11" loading="lazy" width="400" height="400"></div>
+            <div class="wall-item"><img src="images/wall/photo_10.jpg" alt="Editorial skincare imagery 10" loading="lazy" width="400" height="400"></div>
+        </section>
+    </main>
 
     <footer>
+        <span class="footer-tagline">Skincare Curation · Official VENN Partner</span>
         <a href="mailto:lisa1987@makeuplisa.com" class="footer-email">lisa1987@makeuplisa.com</a>
-        <div class="copyright">© 2026 MAKEUP LISA.</div>
+        <p class="footer-note">Science-led skincare curation — not a makeup retailer.</p>
+        <div class="copyright">&copy; 2026 MAKEUP LISA. All rights reserved.</div>
     </footer>
 
+    <script src="js/nav.js"></script>
 </body>
 </html>
